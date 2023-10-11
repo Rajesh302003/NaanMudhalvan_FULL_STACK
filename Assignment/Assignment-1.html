@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> Color Flipper </title>
+<style>
+h1{padding-top:50px;font-family:Roboto;}
+div{font-family:Roboto;border-width:5px; border-color:black;}
+#btn{font-family:Roboto; font-size:0.45cm;background-color:yellow;border-radius: 5px;}
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	var i=0;
+	var col=new Array("red","green","orange","blue","yellow","purple","white","brown","cyan");
+	function change()
+	{
+		document.body.style.backgroundColor=col[i];
+		i++;
+		if(i>col.length)
+		{
+			i=0;
+		}
+		window.setTimeout("change()",750);
+	}
+	window.onload=change();
+	
+	function display()
+	{
+		alert("Record Inserted");
+	}
+
+</script>
+<center>
+<div style="padding:30px;border-width: 5px;border-style: dashed;">
+<h1><i><big> Registration Page</big></i> </h1></br></br></br></br>
+
+<label for="name">Name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+<input type="text" name="name" required></br></br>
+
+<label for="age">Age     &nbsp</label>
+<input type="text" name="age" required></br></br>
+
+<label for="college">College&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+<input type="text" name="college" required></br></br>
+
+<label for="Address">Password&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+<input type="text" name="Address" required></br></br></br></br>
+
+<input type="submit" id="btn" value="Register" onclick="display()"></br></br>
+</div>
+</center>
+</body>
+</html>
